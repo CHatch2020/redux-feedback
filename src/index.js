@@ -11,6 +11,9 @@ const feelingReducer = (state = [], action) => {
     switch (action.type) {
         case 'ADD_FEELING':
             return action.payload;
+        case 'REMOVE_FROM_REDUX':
+            const stateToReturn = [];
+            return stateToReturn;
     }
     return state;
 }
@@ -19,6 +22,9 @@ const understandReducer = (state = [], action) => {
     switch (action.type) {
         case 'ADD_UNDERSTAND':
             return action.payload;
+        case 'REMOVE_FROM_REDUX':
+            const stateToReturn = [];
+            return stateToReturn;
     }
     return state;
 }
@@ -27,6 +33,9 @@ const supportReducer = (state = [], action) => {
     switch (action.type) {
         case 'ADD_SUPPORT':
             return action.payload;
+        case 'REMOVE_FROM_REDUX':
+            const stateToReturn = [];
+            return stateToReturn;
     }
     return state;
 }
@@ -35,6 +44,9 @@ const commentReducer = (state = [], action) => {
     switch (action.type) {
         case 'ADD_COMMENT':
             return action.payload;
+        case 'REMOVE_FROM_REDUX':
+            const stateToReturn = [];
+            return stateToReturn;
     }
     return state;
 }

@@ -2,24 +2,26 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import axios from 'axios'
 import {useHistory} from 'react-router-dom';
+import {useDispatch} from 'react-redux';
 
 function Review(){
     const history = useHistory();
+    const dispatch = useDispatch();
     const feeling = useSelector(store => store.feelingReducer);
     const understanding = useSelector(store => store.understandReducer);
     const support = useSelector(store => store.supportReducer);
     const comments = useSelector(store => store.commentReducer);
 
-    const goToHomePage = () => {
-        console.log('Heading back home');
-        history.push('/')
+    const goToSuccessPage = () => {
+        console.log('Go to success');
+        history.push('/success');
     }
 
     const sendReview = () => {
         console.log('sending post');
         axios ({
             method: 'POST',
-            url: '/feedback',
+            url: '/api/feedback',
             data: {
                 "feeling": `${feeling.feeling}`,
                 "understanding": `${understanding.understanding}`,
@@ -28,10 +30,13 @@ function Review(){
             }
         }).then((res) => {
             console.log('review details', res);
+            dispatch({
+                type: 'REMOVE_FROM_REDUX',
+            })
         }).catch((err) => {
             console.log('Error in POST', err);
         })
-        goToHomePage();
+        goToSuccessPage();
     }
 
     return(
