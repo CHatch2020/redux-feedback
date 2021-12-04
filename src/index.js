@@ -16,14 +16,26 @@ const feelingReducer = (state = [], action) => {
 }
 
 const understandReducer = (state = [], action) => {
+    switch (action.type) {
+        case 'ADD_UNDERSTAND':
+            return action.payload;
+    }
     return state;
 }
 
 const supportReducer = (state = [], action) => {
+    switch (action.type) {
+        case 'ADD_SUPPORT':
+            return action.payload;
+    }
     return state;
 }
 
 const commentReducer = (state = [], action) => {
+    switch (action.type) {
+        case 'ADD_COMMENT':
+            return action.payload;
+    }
     return state;
 }
 
