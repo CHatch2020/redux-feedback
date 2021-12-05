@@ -32,12 +32,12 @@ function Understand() {
   
 
   return (
-    <div>
-      <h2>How well are you understanding the content?</h2>
-      <h4>Understanding?</h4>
-      <input onChange={getUnderstandData} type="number" placeholder="Rate: 1-10" />
+    <div className="text-center py-24">
+      <h2 className="text-4xl">How well are you understanding the content?</h2>
+      <h4 className="text-4xl">Understanding?</h4>
+      <input className="text-2xl shadow-lg" onChange={getUnderstandData} type="number" placeholder="Rate: 1-10" />
 
-      <button onClick={sumbitData}>Next</button>
+      <button className="text-2xl mx-8 px-4 py-1 border-2 border-black rounded bg-green-200" onClick={sumbitData}>Next</button>
     </div>
   );
 }

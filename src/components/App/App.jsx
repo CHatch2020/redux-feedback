@@ -16,9 +16,9 @@ function App() {
 
   return (
     <div>
-      <header className='App-header'>
-        <h1 className="text-blue-400">Feedback!</h1>
-        <h4>Don't forget it!</h4>
+      <header className="bg-blue-400 text-center py-6 text-3xl m-4">
+        <h1 className="text-blue-100 ">Feedback!</h1>
+        <h4 className="underline">Don't forget it!</h4>
       </header>
 
       <Router>

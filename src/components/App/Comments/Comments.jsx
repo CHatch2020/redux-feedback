@@ -31,12 +31,12 @@ function Comments() {
   };
 
   return (
-    <div>
-      <h2>Any comments you want to leave?</h2>
-      <h4>Comments?</h4>
-      <input onChange={getCommentData} type="text" placeholder="Comments" />
+    <div className="text-center py-24">
+      <h2 className="text-4xl">Any comments you want to leave?</h2>
+      <h4 className="text-4xl">Comments?</h4>
+      <input className="text-2xl shadow-lg" onChange={getCommentData} type="text" placeholder="Comments" />
 
-      <button onClick={sumbitData}>Next</button>
+      <button className="text-2xl mx-8 px-4 py-1 border-2 border-black rounded bg-blue-300" onClick={sumbitData}>Next</button>
     </div>
   );
 }

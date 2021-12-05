@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import '../App/App'
+import "../App/App";
 
 function Admin() {
   const [data, setData] = useState([]);
@@ -28,37 +28,47 @@ function Admin() {
   };
 
   const deleteFeedback = () => {
-      console.log('Deleting Data');
-      axios({
-          method: 'DELETE',
-          url: '/delete',
-          data: id
-      }).then((res) => {
-          console.log('Item is Deleted');
-      }).catch((err) => {
-          console.log('Error in axios DELETE', err);
+    console.log("Deleting Data");
+    axios({
+      method: "DELETE",
+      url: "/delete",
+      data: id,
+    })
+      .then((res) => {
+        console.log("Item is Deleted");
+      })
+      .catch((err) => {
+        console.log("Error in axios DELETE", err);
       });
   };
 
   return (
     <div>
       <table className="flex flex-wrap justify-center place-content-center my-44">
-        <tbody className=" p-8 w-100 shadow-lg rounded bg-teal-200">
-          <tr>
-            <th>Feeling</th>
-            <th>Understanding</th>
-            <th>Support</th>
-            <th>Comments</th>
-          </tr>
+        <tbody className=" p-8 w-100 shadow rounded bg-blue-200 border-2 border-gray-200">
+          <thead className="bg-gray-300">
+            <tr className="text-center">
+              <th className="px-8">Feeling</th>
+              <th className="px-8">Understanding</th>
+              <th className="px-8">Support</th>
+              <th className="px-8">Comments</th>
+              <th></th>
+            </tr>
+          </thead>
 
           {data.map((item, i) => {
             return (
-              <tr key={i}>
+              <tr className="text-center" key={i}>
                 <td> {item.feeling} </td>
                 <td> {item.understanding} </td>
                 <td> {item.support} </td>
                 <td> "{item.comments}" </td>
-                <button onClick={deleteFeedback}>Delete</button>
+                <button
+                  className="p-px my-2 shadow-lg hover:shadow-inner hover:bg-green-300 rounded bg-purple-300"
+                  onClick={deleteFeedback}
+                >
+                  Delete
+                </button>
               </tr>
             );
           })}

@@ -31,12 +31,12 @@ function Feeling() {
   };
 
   return (
-    <div>
-      <h2>How are you feeling today?</h2>
-      <h4>Feeling?</h4>
-      <input onChange={getFeelingData} type="number" placeholder="Rate: 1-10" />
+    <div className="text-center py-24">
+      <h2 className="text-4xl">How are you feeling today?</h2>
+      <h4 className="text-4xl">Feeling?</h4>
+      <input className="text-2xl shadow-lg" onChange={getFeelingData} type="number" placeholder="Rate: 1-10" />
 
-      <button onClick={sumbitData}>Next</button>
+      <button className="text-2xl mx-8 px-4 py-1 border-2 border-black rounded bg-red-200" onClick={sumbitData}>Next</button>
     </div>
   );
 }

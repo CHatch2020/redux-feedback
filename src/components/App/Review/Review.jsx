@@ -40,14 +40,15 @@ function Review(){
     }
 
     return(
-        <div>
-            <h2>Review your Feedback</h2>
-            <p>Feelings: {feeling.feeling}</p>
-            <p>Understanding: {understanding.understanding}</p>
-            <p>Support: {support.support}</p>
-            <p>Comments: {comments.comments}</p>
+        <div className="text-center text-4xl ">
+            <h2 className="my-8 text-gray-500">Review your Feedback</h2>
+            ~{"\n"}
+            <p className="my-8 text-red-300">Feelings: {feeling.feeling}</p>
+            <p className="my-8 text-green-300">Understanding: {understanding.understanding}</p>
+            <p className="my-8 text-purple-300">Support: {support.support}</p>
+            <p className="my-8 text-blue-300">Comments: {comments.comments}</p>
 
-            <button onClick={sendReview}>Submit</button>
+            <button className="text-4xl shadow mx-8 px-4 py-1 border-2 border-black rounded bg-purple-300" onClick={sendReview}>Submit</button>
         </div>
     );
 };
