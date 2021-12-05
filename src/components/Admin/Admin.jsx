@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import '../App/App'
 
 function Admin() {
   const [data, setData] = useState([]);
@@ -41,8 +42,8 @@ function Admin() {
 
   return (
     <div>
-      <table>
-        <tbody>
+      <table className="flex flex-wrap justify-center place-content-center my-44">
+        <tbody className=" p-8 w-100 shadow-lg rounded bg-teal-200">
           <tr>
             <th>Feeling</th>
             <th>Understanding</th>
