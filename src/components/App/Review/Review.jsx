@@ -48,7 +48,7 @@ function Review(){
             <p className="my-8 text-purple-300">Support: {support.support}</p>
             <p className="my-8 text-blue-300">Comments: {comments.comments}</p>
 
-            <button className="text-4xl shadow mx-8 px-4 py-1 border-2 border-black rounded bg-purple-300" onClick={sendReview}>Submit</button>
+            <button className="text-4xl shadow mx-8 px-4 py-1 border-2 border-black rounded bg-purple-300 hover:shadow-inner hover:text-gray-200" onClick={sendReview}>Submit</button>
         </div>
     );
 };

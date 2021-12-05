@@ -47,7 +47,7 @@ function Admin() {
       <table className="flex flex-wrap justify-center place-content-center my-44">
         <tbody className=" p-8 w-100 shadow rounded bg-blue-200 border-2 border-gray-200">
           <thead className="bg-gray-300">
-            <tr className="text-center">
+            <tr className="text-center underline">
               <th className="px-8">Feeling</th>
               <th className="px-8">Understanding</th>
               <th className="px-8">Support</th>
@@ -58,13 +58,13 @@ function Admin() {
 
           {data.map((item, i) => {
             return (
-              <tr className="text-center" key={i}>
+              <tr className="text-center bg-yellow-100 rounded border border-white-100" key={i}>
                 <td> {item.feeling} </td>
                 <td> {item.understanding} </td>
                 <td> {item.support} </td>
                 <td> "{item.comments}" </td>
                 <button
-                  className="p-px my-2 shadow-lg hover:shadow-inner hover:bg-green-300 rounded bg-purple-300"
+                  className="p-px mx-4 my-2 shadow-lg hover:shadow-inner hover:bg-green-300 rounded bg-purple-300 border border-gray-200 hover:text-gray-200"
                   onClick={deleteFeedback}
                 >
                   Delete

@@ -33,10 +33,10 @@ function Comments() {
   return (
     <div className="text-center py-24">
       <h2 className="text-4xl">Any comments you want to leave?</h2>
-      <h4 className="text-4xl">Comments?</h4>
+      <h4 className="text-2xl mr-72 ml-8 opacity-30">Comments?</h4>
       <input className="text-2xl shadow-lg" onChange={getCommentData} type="text" placeholder="Comments" />
 
-      <button className="text-2xl mx-8 px-4 py-1 border-2 border-black rounded bg-blue-300" onClick={sumbitData}>Next</button>
+      <button className="text-2xl mx-8 px-4 py-1 border-2 border-black rounded bg-blue-300 hover:text-gray-200 hover:border-white hover:shadow-inner" onClick={sumbitData}>▶️</button>
     </div>
   );
 }
