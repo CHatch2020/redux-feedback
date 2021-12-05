@@ -21,4 +21,33 @@ router.post('/', (req, res) => {
     })
 });
 
+router.get('/', (req, res) => {
+    console.log('In Server Get');
+    const sqlText = `
+        SELECT * FROM "feedback";
+    `;
+    pool.query(sqlText)
+    .then((dbRes) => {
+        res.send(dbRes.rows);
+    }).catch((dbErr) => {
+        res.sendStatus(500);
+    });
+});
+
+router.delete('/', (req, res) => {
+    console.log('In server DELETE');
+    const itemToDelete = req.body;
+    const sqlText = `
+        DELETE FROM "feedback"
+        WHERE "id"=$1;
+    `;
+    const sqlValues = [itemToDelete];
+    pool.query(sqlText, sqlValues)
+        .then((dbRes) => {
+            res.sendStatus(201);
+        }).catch((dbErr) => {
+            res.sendStatus(500);
+        });
+});
+
 module.exports = router;

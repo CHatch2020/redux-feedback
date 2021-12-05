@@ -12,6 +12,8 @@ app.use(express.static('build'));
 /** ---------- EXPRESS ROUTES ---------- **/
 const feedbackRouter = require('./Routes/feedbackRoute.js');
 app.use('/api/feedback', feedbackRouter);
+app.use('/admin', feedbackRouter);
+app.use('/delete', feedbackRouter);
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {
